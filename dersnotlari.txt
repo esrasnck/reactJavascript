@@ -1,0 +1,32 @@
+2 mayıs=>
+package-json kısmında.
+
+// Önemli kısımlar dependencies kısmı
+// es6-module-loader : farklı dosyalarda çalıştığımızda bunlrı birbirine import ettircek
+
+traceur : js next değimiz, ecmascriptleri de çalıştırmamızı sağlayacak basit bir proje
+
+dev-dependencies = live server. (onu biliyorsun zaten),
+
+githubdan çekildiğinden bu paketler proje içinde yok. o yüzden terminalden indircez.  => npm install paket yükelemeye yarar
+
+npm run dev => projeyi çalıştır.
+
+js dosyaları arasında bir hiyersi var
+(index.html kısmı)
+
+app.js=> hiyeraşinin en üstündeki component
+bunun altın navigation var
+bunun altında categoryler, product list vs
+
+bunun altında mesela navigation> cart var
+
+bu hiyeraşıde state managment(durum yönetimi) en önemli problem. mesela sepete eklediğinizde, anında güncellemek istiyorsuz.
+mesela cart a veri eklemek için, önce product=> sonra app => sonra navigation => sonra da cart'a gidiyoruz. basit bir sistem için bile
+4 tane yerden geçiyoruz. daha kompleks bir sistemde işlerimiz (state managment yani durum yönetimimiz) daha zor olacak.
+
+işte bunun için çeşitli ürünler var. bunların en popüleri = REDUX 
+
+Bu state managment'ı yönetmek için datayı tutan bir yer oluşturuyoruz. bu mağazaya isteyenler abone oluyor. data değiştiğinde,
+abonelerinn herbiri, observable design pattern dediğimiz şey ile haberdar oluyor.
+
